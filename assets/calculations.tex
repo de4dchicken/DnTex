@@ -1,0 +1,38 @@
+%Calculations
+\FPeval{\ddbStrength}{trunc((\ddStrength -10) /2:0)}
+\FPeval{\ddbDexterity}{trunc((\ddDexterity -10) /2:0)}
+\FPeval{\ddbConstitution}{trunc((\ddConstitution -10) /2:0)}
+\FPeval{\ddbIntelligence}{trunc((\ddIntelligence -10) /2:0)}
+\FPeval{\ddbWisdom}{trunc((\ddWisdom -10) /2:0)}
+\FPeval{\ddbCharisma}{trunc((\ddCharisma -10) /2:0)}
+%Savings
+\FPeval{\ddsbStrength}{trunc(\ddsStrength * \ddProficiency + \ddbStrength:0)}
+\FPeval{\ddsbDexterity}{trunc(\ddsDexterity * \ddProficiency + \ddbDexterity:0)}
+\FPeval{\ddsbConstitution}{trunc(\ddsConstitution * \ddProficiency + \ddbConstitution:0)}
+\FPeval{\ddsbIntelligence}{trunc(\ddsIntelligence * \ddProficiency + \ddbIntelligence:0)}
+\FPeval{\ddsbWisdom}{trunc(\ddsWisdom * \ddProficiency + \ddbWisdom:0)}
+\FPeval{\ddsbCharisma}{trunc(\ddsCharisma * \ddProficiency + \ddbCharisma:0)}
+
+%Skills
+\FPeval{\ddsbAcrobatics}{trunc(\ddsAcrobatics * \ddProficiency + \ddbDexterity:0)}
+\FPeval{\ddsbSleight}{trunc(\ddsSleight * \ddProficiency + \ddbDexterity:0)}
+\FPeval{\ddsbStealth}{trunc(\ddsStealth * \ddProficiency + \ddbDexterity:0)}
+
+\FPeval{\ddsbAnimal}{trunc(\ddsAnimal * \ddProficiency + \ddbWisdom:0)}
+\FPeval{\ddsbInsight}{trunc(\ddsInsight * \ddProficiency + \ddbWisdom:0)}
+\FPeval{\ddsbMedicine}{trunc(\ddsMedicine * \ddProficiency + \ddbWisdom:0)}
+\FPeval{\ddsbPerception}{trunc(\ddsPerception * \ddProficiency + \ddbWisdom:0)}
+\FPeval{\ddsbSurvival}{trunc(\ddsSurvival * \ddProficiency + \ddbWisdom:0)}
+
+\FPeval{\ddsbArcana}{trunc(\ddsArcana * \ddProficiency + \ddbIntelligence:0)}
+\FPeval{\ddsbHistory}{trunc(\ddsHistory * \ddProficiency + \ddbIntelligence:0)}
+\FPeval{\ddsbInvestigation}{trunc(\ddsInvestigation * \ddProficiency + \ddbIntelligence:0)}
+\FPeval{\ddsbNature}{trunc(\ddsNature * \ddProficiency + \ddbIntelligence:0)}
+\FPeval{\ddsbReligion}{trunc(\ddsReligion * \ddProficiency + \ddbIntelligence:0)}
+
+\FPeval{\ddsbAthletics}{trunc(\ddsAthletics * \ddProficiency + \ddbStrength:0)}
+
+\FPeval{\ddsbDeception}{trunc(\ddsDeception * \ddProficiency + \ddbCharisma:0)}
+\FPeval{\ddsbIntimidation}{trunc(\ddsIntimidation * \ddProficiency + \ddbCharisma:0)}
+\FPeval{\ddsbPerformance}{trunc(\ddsPerformance * \ddProficiency + \ddbCharisma:0)}
+\FPeval{\ddsbPersuasion}{trunc(\ddsPersuasion * \ddProficiency + \ddbCharisma:0)}
