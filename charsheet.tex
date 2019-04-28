@@ -1,0 +1,48 @@
+\documentclass[
+    xetex,
+    a4paper,
+    10pt
+]{scrartcl}                            %% KOMA-Script Dokumentklasse "scrartcl" verwenden
+
+% einbinden der Pakete
+\usepackage{graphicx}                          % Paket um Grafiken einbetten zu können
+\usepackage[a4paper,left=0mm, bottom=0mm, top=10mm, right=0mm]{geometry} % Paket zum Einstellen der Seitenränder
+\usepackage{verbatim}                        % Kommentare länger als eine Zeile (begin/end comment)
+\usepackage{tikz}
+    \usetikzlibrary{decorations.pathmorphing,shapes,shapes.symbols}
+    \tikzstyle{border box}=[draw, very thick, decorate, decoration={random steps, segment length=3pt, amplitude=1pt}, fill=white]
+    \tikzstyle{shade box}=[fill=gray!20, draw opacity=0, decorate, decoration={random steps, segment length=3pt, amplitude=1pt}]
+    \tikzstyle{input box}=[fill=gray!20, rounded corners=.1cm, minimum height=5mm]
+    \tikzstyle{name box}=[draw, very thick, tape, tape bend top=out and in, tape bend bottom=out and in, tape bend height=4mm, fill=white]
+    \tikzstyle{level box}=[draw, very thick, fill=white, signal, signal from = east, signal to = nowhere]
+    \tikzstyle{circle box}=[draw, shape=ellipse, very thick, fill=white]
+
+\usepackage{units}
+
+\usepackage{fontspec}
+    \setmainfont{Z003}
+
+% Setzen globaler Parameter
+\graphicspath{{img/}}                     % legt globalen Pfad für Bilddateien fest
+%\setlength{\parindent}{0pt}                 % unterdrückt den Absatzeinzug
+%\setlength{\parskip}{0pt}         % Erstellt keine leere Zeile für jeden neuen Paragraphen
+
+%\input{background} 
+
+\input{vars}
+
+\begin{document}
+\pagenumbering{gobble}   
+
+\begin{tikzpicture}
+    
+    \input{tikzsource/header1}
+    \input{tikzsource/basics}
+    
+
+    %\input{tikzsource/columns}
+    \input{tikzsource/grid}
+    
+\end{tikzpicture}
+
+\end{document}

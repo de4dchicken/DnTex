@@ -1,0 +1,143 @@
+% base stats
+    \draw[shade box] (0.0,24.8) rectangle  (2.1,9.4);
+    % strength
+    \draw (0.1,24.7) node[border box, minimum width = 19mm, minimum height = 16mm, anchor=north west] (strength) {\Huge \vStrMod}
+        (strength.north) node[anchor=north] {\scriptsize \sffamily \textbf{Strength}}
+        (strength.south) node[circle box, minimum width = 14mm, minimum height = 8mm]{\Large \vStr};
+
+    % dexterity
+    \draw (0.1,22.5) node[border box, minimum width = 19mm, minimum height = 16mm, anchor=north west] (dexterity) {\Huge \vDexMod}
+        (dexterity.north) node[anchor=north] {\scriptsize \sffamily \textbf{Dexterity}}
+        (dexterity.south) node[circle box, minimum width = 14mm, minimum height = 8mm]{\Large \vDex};
+
+    % constitution
+    \draw (0.1,20.3) node[border box, minimum width = 19mm, minimum height = 16mm, anchor=north west] (constitution) {\Huge \vConMod}
+        (constitution.north) node[anchor=north] {\scriptsize \sffamily \textbf{Constitution}}
+        (constitution.south) node[circle box, minimum width = 14mm, minimum height = 8mm]{\Large \vCon};
+
+    % intelligence
+    \draw (0.1,18.1) node[border box, minimum width = 19mm, minimum height = 16mm, anchor=north west] (intelligence) {\Huge \vIntMod}
+        (intelligence.north) node[anchor=north] {\scriptsize \sffamily \textbf{Intelligence}}
+        (intelligence.south) node[circle box, minimum width = 14mm, minimum height = 8mm]{\Large \vInt};
+
+    % wisdom
+    \draw (0.1,15.9) node[border box, minimum width = 19mm, minimum height = 16mm, anchor=north west] (wisdom) {\Huge \vWisMod}
+        (wisdom.north) node[anchor=north] {\scriptsize \sffamily \textbf{Wisdom}}
+        (wisdom.south) node[circle box, minimum width = 14mm, minimum height = 8mm]{\Large \vWis};
+
+    % charisma
+    \draw (0.1,13.7) node[border box, minimum width = 19mm, minimum height = 16mm, anchor=north west] (charisma) {\Huge \vChaMod}
+        (charisma.north) node[anchor=north] {\scriptsize \sffamily \textbf{Charisma}}
+        (charisma.south) node[circle box, minimum width = 14mm, minimum height = 8mm]{\Large \vCha};
+
+    % sanity
+    \draw (0.1,11.5) node[border box, minimum width = 19mm, minimum height = 16mm, anchor=north west] (sanity) {\Huge \vSanMod}
+        (sanity.north) node[anchor=north] {\scriptsize \sffamily \textbf{Sanity}}
+        (sanity.south) node[circle box, minimum width = 14mm, minimum height = 8mm]{\Large \vSan};
+
+% additional stats
+    % proficiency bonus
+    \draw (2.8,24.3) node[anchor=west, rounded corners = 2mm, draw, very thick, fill=white, minimum height=8mm, minimum width=35mm]{}
+        node[circle box, circle, minimum width = 10mm] (prof){}
+        (prof.east) node[anchor=west, inner sep=1pt]{\scriptsize \sffamily \textbf{Proficiency Bonus}}
+        (prof) node{\Large \vProf};
+    
+    % ability save dc | passive wisdom (perception)
+    \draw (1,8.8) node[rounded corners = 2mm, draw, very thick, fill=white, minimum height=8mm, minimum width=21mm](asdc){}
+        node[inner sep=1pt]{\scriptsize \sffamily \textbf{Ability Save DC}}
+        +(.4,-.3)node[anchor=north, inner sep=1pt, draw, circle, very thick, fill=white]{\Large \vAbilitySave}
+        ++(0,-1.5) node[rounded corners = 2mm, draw, very thick, fill=white, minimum height=8mm, minimum width=21mm]{}
+        node[anchor=north, inner sep=1pt]{\scriptsize \sffamily \textbf{(Perception)}}
+        node[anchor=south, inner sep=1pt]{\scriptsize \sffamily \textbf{Passive Wisdom}}
+        +(-.4,.3)node[anchor=south, inner sep=1pt, draw, circle, very thick, fill=white]{\Large \vPerception};
+    
+% saving throws
+    % box
+    \draw[border box] (2.3,23.7) rectangle (6.3, 17.8);
+    % title
+    \draw (4.3,23.7) node[anchor=north] {\scriptsize \sffamily \textbf{SAVING THROWS}};
+    
+    % strength
+    \draw (2.5,23.1) node[anchor=west, draw, very thick, circle, fill=\vStrSaveC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vStrSave{}} \scriptsize \sffamily Strength};
+    % dexterity
+    \draw (2.5,22.6) node[anchor=west, draw, very thick, circle, fill=\vDexSaveC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vDexSave{}} \scriptsize \sffamily Dexterity};
+    % constitution
+    \draw (2.5,22.1) node[anchor=west, draw, very thick, circle, fill=\vConSaveC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vConSave{}} \scriptsize \sffamily Constitution};
+    % intelligence
+    \draw (2.5,21.6) node[anchor=west, draw, very thick, circle, fill=\vIntSaveC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vIntSave{}} \scriptsize \sffamily Intelligence};
+    % wisdom
+    \draw (2.5,21.1) node[anchor=west, draw, very thick, circle, fill=\vWisSaveC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vWisSave{}} \scriptsize \sffamily Wisdom};
+    % charisma
+    \draw (2.5,20.6) node[anchor=west, draw, very thick, circle, fill=\vChaSaveC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vChaSave{}} \scriptsize \sffamily Charisma};
+    % sanity
+    \draw (2.5,20.1) node[anchor=west, draw, very thick, circle, fill=\vSanSaveC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vSanSave{}} \scriptsize \sffamily Sanity};
+    % advantage/disadvantage
+    \draw (2.4,19.6) node[anchor=west]{\scriptsize \sffamily \underline{ADV} DIS \rmfamily\Large\underline{Poison}};
+    
+% skill checks
+    % box
+    \draw[border box] (2.3, 16.3) rectangle (6.3, 6.9);
+    % title
+    \draw (4.3,16.3) node[anchor=north] {\scriptsize \sffamily \textbf{SKILL CHECKS}};
+    
+    % acrobatics
+    \draw (2.5,15.7) node[anchor=west, draw, very thick, circle, fill=\vAcroC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vAcro{}} \scriptsize \sffamily Acrobatics \color{gray}(Dex)};
+    % animal handling
+    \draw (2.5,15.2) node[anchor=west, draw, very thick, circle, fill=\vAnimC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vAnim{}} \scriptsize \sffamily Animal Handling \color{gray}(Wis)};
+    % arcana
+    \draw (2.5,14.7) node[anchor=west, draw, very thick, circle, fill=\vArcaC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vArca{}} \scriptsize \sffamily Arcana \color{gray}(Int)};
+    % athletics
+    \draw (2.5,14.2) node[anchor=west, draw, very thick, circle, fill=\vAthlC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vAthl{}} \scriptsize \sffamily Athletics \color{gray}(Str)};
+    % deception
+    \draw (2.5,13.7) node[anchor=west, draw, very thick, circle, fill=\vDeceC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vDece{}} \scriptsize \sffamily Deception \color{gray}(Cha)};
+    % history
+    \draw (2.5,13.2) node[anchor=west, draw, very thick, circle, fill=\vHistC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vHist{}} \scriptsize \sffamily History \color{gray}(Int)};
+    % insight
+    \draw (2.5,12.7) node[anchor=west, draw, very thick, circle, fill=\vInsiC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vInsi{}} \scriptsize \sffamily Insight \color{gray}(Wis)};
+    % intimidation
+    \draw (2.5,12.2) node[anchor=west, draw, very thick, circle, fill=\vIntiC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vInti{}} \scriptsize \sffamily Intimidation \color{gray}(Cha)};
+    % investigation
+    \draw (2.5,11.7) node[anchor=west, draw, very thick, circle, fill=\vInveC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vInve{}} \scriptsize \sffamily Investigation \color{gray}(Int)};
+    % medicine
+    \draw (2.5,11.2) node[anchor=west, draw, very thick, circle, fill=\vMediC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vMedi{}} \scriptsize \sffamily Medicine \color{gray}(Wis)};
+    % nature
+    \draw (2.5,10.7) node[anchor=west, draw, very thick, circle, fill=\vNatuC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vNatu{}} \scriptsize \sffamily Nature \color{gray}(Int)};
+    % perception
+    \draw (2.5,10.2) node[anchor=west, draw, very thick, circle, fill=\vPercC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vPerc{}} \scriptsize \sffamily Perception \color{gray}(Wis)};
+    % performance
+    \draw (2.5,9.7) node[anchor=west, draw, very thick, circle, fill=\vPerfC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vPerf{}} \scriptsize \sffamily Performance \color{gray}(Cha)};
+    % persuasion
+    \draw (2.5,9.2) node[anchor=west, draw, very thick, circle, fill=\vPersC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vPers{}} \scriptsize \sffamily Persuasion \color{gray}(Cha)};
+    % religion
+    \draw (2.5,8.7) node[anchor=west, draw, very thick, circle, fill=\vReliC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vReli{}} \scriptsize \sffamily Religion \color{gray}(Int)};
+    % sleight of hand
+    \draw (2.5,8.2) node[anchor=west, draw, very thick, circle, fill=\vSleiC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vSlei{}} \scriptsize \sffamily Sleight of Hand \color{gray}(Dex)};
+    % stealth
+    \draw (2.5,7.7) node[anchor=west, draw, very thick, circle, fill=\vSteaC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vStea{}} \scriptsize \sffamily Stealth \color{gray}(Dex)};
+    % survival
+    \draw (2.5,7.2) node[anchor=west, draw, very thick, circle, fill=\vSurvC, minimum width=1mm] (circ) {}
+        (circ.east) node[anchor=west]{\Large \underline{\vSurv{}} \scriptsize \sffamily Survival \color{gray}(Wis)};

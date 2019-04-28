@@ -1,0 +1,53 @@
+% name box
+        % background
+        \draw (0,26) node[anchor=west,name box, minimum height=18mm, minimum width=83mm, inner sep=5pt] {};
+        % line
+        \draw[gray] (0.2,25.8) -- (18.3, 25.8);
+        %text
+        \draw (0.2,25.8) node[anchor=north west, inner sep=1pt, gray] {\tiny \sffamily CHARACTER NAME} 
+                +(0,-0.2) node[anchor=south west, inner sep=1pt, font=\vphantom{Ag}] {\Huge \vName};
+
+% right flag
+        % background
+        \draw (17,26) node[anchor=west,level box, minimum height=14mm, minimum width=25mm] {};
+
+% big box
+        \draw (8,26) node[anchor=west, border box, minimum height=20mm, minimum width=102mm] {};
+
+% upper line
+        \draw[gray] (8.2,26.2) -- (18,26.2);
+
+        % class
+        \draw (8.2,26.2) node[anchor=north west, inner sep=1pt, gray] {\tiny \sffamily CLASS} 
+               +(0,-0.1) node[anchor=south west, inner sep=1pt, font=\vphantom{Ag}] {\Large \vClass};
+
+        % level
+        \draw (12.2,26.2) node[anchor=north west, inner sep=1pt, gray] {\tiny \sffamily LEVEL} 
+               +(0,-0.1) node[anchor=south west, inner sep=1pt, font=\vphantom{Ag}] {\Large \vLvl};
+        
+        % XP
+        \draw (13.2,26.2) node[anchor=north west, inner sep=1pt, gray] {\tiny \sffamily  EXPERIENCE} 
+                +(0,0)  node[anchor=south west, inner sep=1pt, gray] {\tiny \sffamily NEXT LEVEL} 
+                +(1.2,-0.1) node[anchor=south west, inner sep=1pt, font=\vphantom{Ag}] { \vnXP}
+                +(0,0.3)        node[anchor=south west, inner sep=1pt, gray] {\tiny \sffamily CURRENT}
+                +(1.2,.2) node[anchor=south west, inner sep=1pt, font=\vphantom{Ag}] { \vXP};
+
+        % player name
+        \draw (15.5,26.2) node[anchor=north west, inner sep=1pt, gray] {\tiny \sffamily PLAYER NAME} 
+                +(0,-0.1) node[anchor=south west, inner sep=1pt, font=\vphantom{Ag}] {\Large \vPlayer};
+
+
+% lower line
+        \draw[gray] (8.2,25.3) -- (18,25.3);
+
+        % race
+        \draw (8.2,25.3) node[anchor=north west, inner sep=1pt, gray] {\tiny \sffamily RACE} 
+               +(0,-0.1) node[anchor=south west, inner sep=1pt, font=\vphantom{Ag}] {\Large \vRace};
+
+        % background
+        \draw (12.2,25.3) node[anchor=north west, inner sep=1pt, gray] {\tiny \sffamily BACKGROUND} 
+                +(0,-0.1) node[anchor=south west, inner sep=1pt, font=\vphantom{Ag}] {\Large \vBackground};
+
+        % alignment
+        \draw (15.5,25.3) node[anchor=north west, inner sep=1pt, gray] {\tiny \sffamily ALIGNMENT} 
+                +(0,-0.1) node[anchor=south west, inner sep=1pt, font=\vphantom{Ag}] {\Large \vAlignment};

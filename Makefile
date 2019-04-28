@@ -3,33 +3,34 @@ TEXFLAGS=-interaction=nonstopmode
 DEBUGFLAGS=
 LOG=> compile.log
 
-TEXFILE:=sheet.tex
+all: charsheet.pdf 
 
-all: sheet.pdf
-
-.PHONY: clean cleanall debug
+.PHONY: clean cleanall debug remake
 	
 clean:
-	rm -f *.aux
-	rm -f *.bbl
-	rm -f *.bcf
-	rm -f *.blg
-	rm -f *.log
-	rm -f *.out
-	rm -f *.run.xml
-	rm -f *.toc
+	rm -f charsheet.aux
+	rm -f charsheet.bbl
+	rm -f charsheet.bcf
+	rm -f charsheet.blg
+	rm -f charsheet.log
+	rm -f charsheet.out
+	rm -f charsheet.run.xml
+	rm -f charsheet.toc
 
 cleanall:
 	make clean
-	rm -f *.pdf compile.log
+	rm -f charsheet.pdf compile.log
 
-sheet.pdf: *.tex assets/*.tex
+remake:
+	make cleanall
+	make all
 
-debug: sheet.tex
+charsheet.pdf: *.tex #bilder/* 
+
+debug: charsheet.tex
 	$(TEX) $< $(DEBUGFLAGS)
 
-%.pdf: %.tex #pattern for every .tex
+%.pdf: %.tex # Muster für alle TeX-Dateien
 	$(TEX) $< $(TEXFLAGS) $(LOG)
 	$(TEX) $< $(TEXFLAGS) $(LOG)
 	make clean
-	
